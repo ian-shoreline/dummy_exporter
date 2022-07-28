@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: istio-deployment
+spec:
+  selector:
+    matchLabels:
+      app: istio
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: istio
+    spec:
+      containers:
+      - name: istio
+        image: mrcherries/dummy_exporter:v0
+        ports:
+        - containerPort: 8000
