@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: istio
-        image: mrcherries/dummy_exporter:v0
+        image: mrcherries/dummy_exporter:v1
         ports:
         - containerPort: 8000
